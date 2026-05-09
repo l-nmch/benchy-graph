@@ -9,7 +9,7 @@ To generate the required CSV file, use [llama-benchy](https://github.com/eugr/ll
 Example command to generate the CSV:
 
 ```bash
-uvx llama-benchy --base-url http://127.0.0.1:8000/v1 --model Qwen/Qwen3.6-27B --served-model-name unsloth/Qwen3.6-27B-GGUF --concurrency 1 2 4 8 16 32 --pp 128 --tg 128 --format csv
+uvx llama-benchy --base-url http://127.0.0.1:8000/v1 --model Qwen/Qwen3-0.6B --served-model-name Qwen/Qwen3-0.6B --concurrency 1 2 4 8 16 32 --pp 128 --tg 128 --format csv
 ```
 
 This will produce a CSV file with benchmark results that can be used as input for Benchy-Graph.
@@ -26,3 +26,9 @@ Replace `<input.csv>` with the path to your llama-benchy CSV file and `<output.p
 ## Running the Notebook
 
 For an interactive experience, open `notebook.ipynb` in Jupyter Notebook or JupyterLab and execute the cells. The notebook contains all the necessary code and explanations for generating visualizations.
+
+## Example output
+
+> This example has been made with [mixa3607/ML-gfx906](https://github.com/mixa3607/ML-gfx906/tree/master/vllm) custom vLLM docker image
+
+![vLLM Qwen3-0.6B Demo](docs/img/demo.png)
